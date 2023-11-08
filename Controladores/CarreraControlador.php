@@ -3,7 +3,7 @@
 require_once("Clases/Carrera.php");
 require_once("Controladores/FacultadControlador.php");
 
-class CarreraController{
+class CarreraControlador{
 
     public function createCarrera(String $nombre, int $id_facultad){
         $conn = new Conn();
