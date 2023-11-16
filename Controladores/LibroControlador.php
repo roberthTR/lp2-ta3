@@ -55,7 +55,15 @@ class LibroControlador{
     
         return $resultado;
     }
-
+    public function PublicarLibro(String $nombre, int $autor, String $edicion, bool $disponibilidad, String $fechaPublicacion, int $precio ){
+        $conn = new Conn();
+        $conexion = $conn->conectar();
+        $sql = "SELECT * FROM libro(nombre, autor, edicion,disponibilidad, fechaPublicacion,precio) VALUES ('nombre',$nombre,'edicion',$edicion,'fechaPublicacion',$fechaPublicacion)";
+        $resultado = $conexion->query($sql);
+        $conn->cerrar();
+    
+        return $resultado;
+    }
 
 
 
